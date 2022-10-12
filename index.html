@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="topbar ">
+            <div class="container-fluid">
+                <div class="row row10 text-white">
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center">
+                        <div class="mobile">
+                            <h7><b><i class="fa-solid fa-square-phone"></i> Mobile: HR: +91-8531073444,<br> For
+                                    Sales:9942465624 </b>
+
+                            </h7>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center">
+                        <div class="tele">
+                            <div><b><i class="fa-solid fa-square-phone"></i> TelePhone:0422-4218177</b></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center">
+                        <div class="mail">
+                            <div><b><i
+                                        class="fa-sharp fa-solid fa-envelope"></i>Email:contact@xorticantechnologies.com<br>hr@xorticantechnologies.com</b>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3">
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row1">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="col-6">
+                    <div class="img">
+                        <a class="navbar-brand text-white" href="#"><img class="w-75 ml-5 "
+                                src=" data:image/png;base64,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"
+                                alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="col-6">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white" href="#Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#About Us">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#Products">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#Services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#Website pricing">Website pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#Clients">Clients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#Careers">Careers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#Contact">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        </div>
+
+
+        <section class="script pt-3 row9">
+            <div class="container-fluid ">
+                <div class="row9">
+                    <div class="col-12">
+
+                        <h6>Hiring 3+years experienced Angular developer,Node.js<br>developer</h6>
+                        <h6>Forward your resume to our official mail,</h6>
+                        <h2>hr@xoticantechnologies.com</h2>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="carousel1" id="Home">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="masthead d-flex align-items-center text-white">
+                            <div class="container-fluid">
+                                <div class="row1">
+                                    <div class="col-12 text-center">
+                                        <div class="jumbotron big bg-transparent">
+                                            <h1 class="text-center font-weight-bold">WEB DEVELOPMENT</h1>
+                                            <h3 class="font-weight-bold">Our professional web designers
+                                                specialize in
+                                                creating professional websites that effectively promote our
+                                                clients
+                                                products and services to their target audience.</h3>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="masthead1 d-flex align-items-center text-white">
+                            <div class="container-fluid">
+                                <div class="row1">
+                                    <div class="col-12 text-center">
+                                        <div class="jumbotron big bg-transparent">
+                                            <h1 class="text-center font-weight-bold">APP DEVELOPMENT</h1>
+                                            <h3 class="font-weight-bold">Mobile application development by which
+                                                application
+                                                software is developed for handheld devices, such as personal
+                                                digital
+                                                assistants,
+                                                enterprise digital assistants or mobile phones.</h3>
+
+                                        </div>
+                                        <a class="text-center btn btn-lg btn-success" href="#about">Get
+                                            started</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="masthead2 d-flex align-items-center text-white">
+
+                            <div class="container-fluid">
+                                <div class="row1">
+                                    <div class="col-12 text-center">
+                                        <div class="jumbotron big bg-transparent text-center">
+                                            <h1 class="font-weight-bold">SOFTWARE TESTING</h1>
+
+                                            <h3 class="font-weight-bold">Testing and Validation Services has
+                                                evolved
+                                                significantly
+                                                over the last decade.The supporting disciplines are
+                                                configuration
+                                                management,
+                                                documentation,software quality assurance,Project management and
+                                                user
+                                                experience.
+                                            </h3>
+                                        </div>
+                                        <a class="text-center btn btn-lg btn-success" href="#about">Get
+                                            started</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="masthead3 d-flex align-items-center text-white">
+                            <div class="container-fluid">
+                                <div class="row1 ">
+                                    <div class="col-12 text-center">
+                                        <div class="jumbotron big bg-transparent text-center ">
+                                            <h1 class="font-weight-bold">DIGITAL MARKETTING</h1>
+
+                                            <h3 class="font-weight-bold">The offline and online world are
+                                                colliding.
+                                                Traditional
+                                                devices such as fridges, ovens and even billboards will all be
+                                                modernized to
+                                                leverage digital media.
+
+                                            </h3>
+                                        </div>
+                                        <a class=" text-center btn btn-lg btn-success" href="#about">Get
+                                            started</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="carousel2">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container-fluid rowww ">
+                            <div class="row row2 pt-5  pl-5 ">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <img class="w-75 mb-5" src="http://xorticantechnologies.com/img/team/Vision.jpg"
+                                        alt="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 text-dark">
+                                    <h3>VISION</h3>
+                                    <p>Our vision is to be the well-regarded IT service provider
+                                        by delivering long term value to all stakeholders. We want to
+                                        offer our customers an unforgettable experience, high quality
+                                        services and all our support to future collaborations.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid rowww ">
+                            <div class="row row2 pt-5 pl-5">
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <img class="w-75 mb-5" src="http://xorticantechnologies.com/img/team/Mission.jpg"
+                                        alt="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 text-dark">
+                                    <h3>MISSION</h3>
+                                    <p>We are dedicated to providing the best Quality, Value and
+                                        Service to meet our customers needs. We put hands together to
+                                        produce excellent services in the field of IT services with
+                                        maximum efforts driven towards customer satisfaction. Our
+                                        mission is to bring cost effective IT Services to all business
+                                        verticals with commitment to fair, ethical and legal business
+                                        practices by:</p>
+                                    <p>* Achieve the benefits of innovation without increasing
+                                        their IT expenditure.</p>
+                                    <p>* Combining our experience and expertise to align their
+                                        business and technology goals.</p>
+                                    <p>* Adhering to industry standard business processes.</p>
+                                    <p>* Focusing on ethical business practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div>
+            </div>
+            </div>
+            </div>
+            </div> -->
+
+            </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+            </div>
+        </section>
+
+
+        <section class="products " id="Products">
+            <div class="container-fluid roww">
+                <div class="row3 pt-5">
+                    <div class="col-12">
+                        <h1 class="text-center font-weight-bold">OUR <span style="color: #2416e1;"> PRODUCTS
+                            </span></h1>
+                        <hr class=" bs border-dark">
+                    </div>
+
+                </div>
+                <div class="row row3 ml-5  pl-5">
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2 class="">Project Management System</h2>
+                        <p>From work and sales orders to shipments and quotes, all manufacturing<br> project data is
+                            easily obtainable through the Project Management <br>application. View all open orders and
+                            components for a single project on<br> one screen for easy assimilation of pertinent data.
+                            Project status reporting<br> makes analysis of data simple, with detailed cost and status
+                            data available <br>by main project or individual job. Control costs and stay within budget
+                            with<br> increased accuracy and visibility of all project data. Use the customizable<br>
+                            Project
+                            Management application to create budgets by both work order or<br> project group, helping
+                            you manage estimated costs versus actual costs over<br> the life of the project.</p>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/project2.JPG" alt="">
+                    </div>
+
+                </div>
+                <div class="row row3 ml-5 pt-4 pl-5">
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/hospital1.jpg" alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2 class="">Hospital Management System</h2>
+                        <p>Easy access to doctors data to generate varied records, including classification<br> based on
+                            demographic, gender, age. Internet-based access improves the <br>ability to remotely access
+                            such
+                            data. Efficient and accurate administration of<br> finance, diet of patient, engineering,
+                            and
+                            distribution of medical aid. It helps<br> to view a broad picture of hospital growth.
+                            Improved
+                            monitoring of drug<br> usage. Enhances information integrity, reduces transcription errors,
+                            and<br>
+                            reduces duplication of information entries. Hospital software is easy to use<br> and
+                            eliminates
+                            error caused by handwriting. New technology computer<br> systems give perfect performance to
+                            pull up information from server or<br>cloud servers.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row row3 ml-5 pt-4  pl-5">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2 class="">E-Commerce</h2>
+                        <p>Easier and simpler options for payment via credit card and other electronic<br> options means
+                            faster payment on your manufacturing invoices. Faster<br> payment means improved cash flow
+                            and a stronger position with your<br> vendors. When your eCommerce solution is a part of
+                            your ERP software, you<br>eliminate concerns about accuracy of data transfers from one
+                            system to the<br> other. Your eCommerce transactions are fully integrated into your
+                            complete<br> ERP system. Features such as electronic billing options, credit card
+                            integration, <br>and options for your customers to see open orders, shipments in process
+                            and<br> outstanding AR, you offer greater convenience to your customers and strong<br>
+                            technological capabilities</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/ecommerce.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row row3 ml-5 pt-4 pl-5 ">
+                    <div class="col-6">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/document.jpg" alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2 class="">Document Control</h2>
+                        <p>Move closer to a leaner, paperless manufacturing environment in your offices<br> and on the
+                            shop floor. Any document can be stored in digital format and<br> attached to the related
+                            project, transaction or order. Simply click and pull it up<br> on your computer monitor.
+                            with all your related documentation attached in<br> digital form, printing of all related
+                            materials becomes a simple click of the<br> mouse. Within minutes you can have a complete
+                            set of quality requirements<br> and inspection plans.
+                        </p>
+                    </div>
+                </div>
+                <div class="row row3 ml-5 pt-4 pl-5">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2 class="">Mobile-Taxi</h2>
+                        <p>Mobile-Taxi Software leads technology into new directions providing one-of-<br>a-kind cab
+                            dispatch software with the best service management system.<br> Supported by high precision
+                            GPS tracking and built-in driver and passenger<br> friendly application attributes,
+                            Mobile-Taxi stands by its customers that serves<br> to accelerate better business results.
+                            Ease your process of taxi dispatch with an<br> extensive taxi management suite capable of
+                            handling more than 10000 taxi's.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/taxi.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row row3 ml-5 pt-4 pl-5 ">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/crm.jpg" alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2 class="">CRM</h2>
+                        <p>CRM software has customized features to accommodate expansion phase. It<br> has capability to
+                            add more users & functionality to manage them. You can<br> add more fields for storing
+                            customers' contacts, search layouts, user level<br> security, reports and manage a
+                            business-customer relationship, This systems<br>are also used to manage business contacts,
+                            employees, clients and sales leads.<br>In the enterprise and in many products scale and can
+                            be used in a business of<br> any size.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row row3 ml-5 pt-4  pl-5">
+                    <div class="col-lg-6 col-md-6 col-sm-12 ">
+                        <h2 class="">School Management System</h2>
+                        <p>School Management System is a large database system which can be used<br> for managing your
+                            school's day to day business. SMS allows users to store<br> almost all of their school's
+                            information electronically, including information,<br> on students, employees, properties,
+                            teaching meteorites etc. Most<br> importantly, this information can be easily shared with
+                            authorized users,<br> records can be easily searched, and reports can be easily generated.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/school.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="row row3 ml-5 pt-4 pl-5">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="w-75" src="http://xorticantechnologies.com/img/team/payroll.jpg" alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h2 class="">Payroll System</h2>
+                        <p>Human Resources, Employee, and Payroll software gives your manufacturing<br> business one
+                            system to manage the human capital and benefits. An<br> application within our integrated
+                            ERP package, track employee time, view<br> performance, and execute payroll and benefits.The
+                            rest of our ERP package,<br> human resource reporting will show employee performance.
+                            Human<br> resources and payroll software provides with performance measurement by<br> direct
+                            labor, indirect labor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clients">
+            <div class="container-fluid r4">
+                <div class="row row4 text-white text-center pt-5 pb-5 mr-5">
+                    <div class="col-lg-3 col-md-6 col-sm-12 img-thumbnail bg-dark mr-2">
+                        <h1>40</h1>
+                        <i class="rounded-0 fa fa-users fa-3x"></i>
+                        <h3 class="">Happy Clients</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 img-thumbnail bg-dark mr-2">
+                        <h1>35</h1>
+                        <i class="fa fa-check-square fa-3x"></i>
+                        <h3>Projects Completed</h3>
+                    </div>
+                    <div class=" col-lg-3 col-md-6 col-sm-12 img-thumbnail bg-dark mr-2">
+                        <h1>54923</h1>
+                        <i class="fa fa-thumbs-up fa-3x"></i>
+                        <h3>Lines of Code</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 img-thumbnail bg-dark mr-2">
+                        <h1>2509</h1>
+                        <i class="fa fa-coffee fa-3x"></i>
+                        <h3>Cups of Coffee</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services text-center" id="Services"> 
+            <div class="container-fluid">
+                <div class="row5 text-center pt-5">
+                    <div class="col-12">                                                  
+                        <h1 class=" font-weight-bold">OUR <span style="color: #2416e1;"> SERVICES
+                            </span></h1>
+                        <hr class="border-dark">
+                    </div>
+                </div>
+                <div class="row row5 ">
+
+                    <div class="card-deck w-75 pt-5 ">
+                        <div class="card shadow ">
+                            <div class="l text-center pt-5 ">
+                                <img class="ima w-25 card-img-top"
+                                    src="http://xorticantechnologies.com/img/webdevelopment.jpg" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">WEB DEVELOPMENT</h3>
+                                <p class="card-text">Our professional web designers specialize in creating
+                                    professional
+                                    web
+                                    sites that effectively promote our clients products and services to their target
+                                    audience.We are clearly defining business, technical, and design coupled with
+                                    strong
+                                    project management to achieve good designs.We focus the project on your
+                                    (client’s)
+                                    goals, address critical issues; blend it with innovative solutions, sound
+                                    research
+                                    analysis, and quality control mechanisms. We deliver solutions within time and
+                                    budget,
+                                    thereby, keeping you ahead of your business competitors.</p>
+                                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                            </div>
+
+                        </div>
+                        <div class="card shadow">
+
+
+                            <div class="l text-center pt-5">
+                                <img class="ima card-img-top w-25" src="http://xorticantechnologies.com/img/web.jpg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">WEB DESIGN</h3>
+                                <p class="card-text">Web graphic designers use vector and raster graphics packages
+                                    to
+                                    create
+                                    web-formatted imagery or design prototypes.These are often WYSIWYG but with the
+                                    option
+                                    of using the software’s scripting language. Search engine optimisation tools may
+                                    be
+                                    used
+                                    to check search engine ranking and suggest improvements.These are often WYSIWYG
+                                    but
+                                    with
+                                    the option of using the software’s scripting language. Other tools web designers
+                                    might
+                                    use include mark up validators and other testing tools for usability and
+                                    accessibility.
+                                </p>
+                                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                            </div>
+                        </div>
+
+                        <div class="card  shadow">
+
+                            <div class="l pt-5 text-center">
+
+                                <img class="ima w-25 card-img-top" src="http://xorticantechnologies.com/img/Android.png"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">APPS DEVELOPMENT</h3>
+                                <p class="card-text">Mobile application development by which application
+                                    software is
+                                    developed for handheld devices, such as personal digital assistants,
+                                    enterprise
+                                    digital
+                                    assistants or mobile phones. These applications can be pre-installed on
+                                    phones
+                                    during
+                                    manufacturing platforms, or delivered as web applications using server-side
+                                    or
+                                    client-side processing to provide an "application-like" experience within a
+                                    Web
+                                    browser.
+                                    As part of the development process, Mobile User Interface (UI) Design is
+                                    also an
+                                    essential in the creation of mobile apps.</p>
+                                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row5 ">
+                <div class="card-deck w-75 pt-5 pl-2">
+                    <div class="card  shadow">
+                        <div class="l pt-5 text-center">
+                            <img class="ima w-25 card-img-top" src="http://xorticantechnologies.com/img/healthcare.png"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">HEALTHCARE SERVICES</h3>
+                            <p class="card-text">We help healthcare organizations transform, innovate, and optimize
+                                to
+                                build tomorrow’s healthcare enterprise.We recognize healthcare needs and also bring
+                                best
+                                practices and industry solutions to suit specific healthcare models in different
+                                regions
+                                / countries.We are dedicated to provide the knowledge and confidence required for
+                                the
+                                organization to become competitive and also to provide quality in today’s changing
+                                environment.This is achieved through many networks and protocols.</p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                    <div class="card  shadow">
+                        <div class="l pt-5 text-center">
+                            <img class=" ima card-img-top w-25"
+                                src="http://xorticantechnologies.com/img/softwaretesting.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">SOFTWARE TESTING</h3>
+                            <p class="card-text">Testing and Validation Services has evolved significantly over the
+                                last
+                                decade.The supporting disciplines are configuration management,
+                                documentation,software
+                                quality assurance,Project management and user experience.we ensure a risk-free and
+                                value-driven delivery.Xortican Test Consulting provides a comprehensive approach to
+                                testing and quality assurance, encompassing aspects of enterprise-wide QA strategy,
+                                maturity assessment, QA tools, and infrastructure strategy.
+                            </p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                    <div class="card  shadow">
+                        <div class="l pt-5 text-center">
+                            <img class="ima w-25 card-img-top"
+                                src="http://xorticantechnologies.com/img/humanresource.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">HUMAN RESOURCE</h3>
+                            <p class="card-text">We employ a transformation-driven approach to build a customized
+                                roadmap that helps achieve your business objectives such as enhancing employee
+                                experience, control, achieving operational excellence, and improving efficiency of
+                                working capital.Our approach includes:Business process improvements derived from
+                                industry-leading practices, maturity models, and benchmarking with peer metrics
+                                Continuous improvements, process streamlining, and technology transformation
+                                capabilities.</p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row row5">
+                <div class="card-deck w-75 pt-5 pl-2">
+                    <div class="card shadow">
+                        <div class="l text-center pt-5">
+                            <img class="ima w-25 card-img-top" src="http://xorticantechnologies.com/img/ecommerce.png"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">E-COMMERCE</h3>
+                            <p class="card-text">We employ a transformation-driven approach to build a customized
+                                roadmap that helps achieve your business objectives such as enhancing employee
+                                experience, control, achieving operational excellence, and improving efficiency of
+                                working capital.Our approach includes:Business process improvements derived from
+                                industry-leading practices, maturity models, and benchmarking with peer</p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+
+                    <div class="card shadow">
+                        <div class="l text-center pt-5">
+                            <img class=" ima card-img-top w-25"
+                                src="http://xorticantechnologies.com/img/digitalmarcketing.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">DIGITAL MARKETING</h3>
+                            <p class="card-text">We employ a transformation-driven approach to build a customized
+                                roadmap that helps achieve your business objectives such as enhancing employee
+                                experience, control, achieving operational excellence, and improving efficiency of
+                                working capital.Our approach includes:Business process improvements derived from
+                                industry-leading practices, maturity models, and benchmarking with peer metrics
+                                Continuous improvements, process streamlining, and technology transformation
+                                capabilities.
+                            </p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="skills">
+            <div class="container-fluid">
+                <div class="row row6 pt-5">
+                    <div class="col-12">
+                        <h1 class="text-center font-weight-bold">OUR <span style="color: #2416e1;"> SKILLS
+                            </span></h1>
+                        <hr class="border-dark">
+                    </div>
+                </div>
+                <div class="row row6 text-center pt-5">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="w-50" src="images/download.png" alt="">
+                        <h3>80%</h3>
+                        <h3>Development</h3>
+                        <hr class="border-dark">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+
+                        <img class="w-50" src="images/download (1).png" alt="">
+                        <h3>90%</h3>
+                        <h3>HTML 5</h3>
+
+                        <hr class="border-dark">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="w-50" src="images/download (2).png" alt="">
+                        <h3>45%</h3>
+                        <h3>Mobile Apps</h3>
+                        <hr class="border-dark">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+
+                        <img class="w-50" src="images/download (3).png" alt="">
+                        <h3>70%</h3>
+                        <h3>Testing</h3>
+                        <hr class="border-dark">
+                    </div>
+                </div>
+                <div class="row row6 d-flex  text-center pt-5">
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+
+                        <img class="w-50" src="images/download (4).png" alt="">
+                        <h3>70%</h3>
+                        <h3>Website
+                            Development</h3>
+                        <hr class="border-dark">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+
+                        <img class="w-50" src="images/download (5).png" alt="">
+                        <h3>60%</h3>
+                        <h3>Digital
+                            Marketing</h3>
+                        <hr class="border-dark">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="carousel3 " id="About Us">
+
+            <div class="container-fluid ">
+                <div class="row row5  pt-5">
+                    <div class="col-12 text-center">
+                        <h3 class="text-white">WHAT PEOPLE SAY ABOUT US</h3>
+                    </div>
+                </div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner text-white">
+                        <div class="carousel-item active mb-5">
+
+                            <div class="row row5  pt-5">
+                                <div class="col-12 d-flex justify-content-center">
+
+                                    <img class="rounded-pill d-block"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDRjW08mUp5ZWwa2BX8wVgkuBlepnr2TJ0q-__uYAREjB14M7UmOdl6BfFiD4eXEHqFtA&usqp=CAU"
+                                        alt="First slide"><br><br>
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h3>Jose Abraham Jacob</h3>
+
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h7>Dec 26 2014</h7><br>
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h7>Pleasure to work with the xortican,Nice job. </h7><br><br>
+
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+
+                                    <i class="mr-2 fa-brands fa-square-facebook"></i>
+                                    <i class="mr-2 fa-brands fa-square-twitter"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="carousel-item mb-5">
+                            <div class="row row5 pt-5">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <img class="d-block rounded-pill"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUwqHgi1DFhYQX0p0jnpPURHsNvzO9AGeL7l5HKJiN8uGEXFJo0KCRrpvPOZ3zMKmzUMk&usqp=CAU"
+                                        alt="Second slide"><br><br>
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h3>William G. Mckinney</h3>
+
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h7>Nov 26 2015</h7><br>
+
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h7>They did a great job,and we appreciate their efforts</h7><br><br>
+
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <i class="mr-2 fa-brands fa-square-facebook"></i>
+                                    <i class="mr-2 fa-brands fa-square-twitter"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="carousel-item mb-5">
+                            <div class="row row5 pt-5">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <img class="w-25 d-block rounded-pill"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73RA8FrGIsvQdzPCcmeRWVLzXJH3sInI7sA&usqp=CAU"
+                                        alt="Third slide"><br><br>
+                                </div>
+                            </div>
+
+
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h3>Carl Griffenkranz</h3>
+
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h7>Jan 03 2016</h7><br>
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+                                    <h7>This is a quick,effective team that really cares for their client success.</h7>
+                                    <br><br>
+
+                                </div>
+                            </div>
+                            <div class="row row5">
+                                <div class="col-12 text-center">
+
+                                    <i class="mr-2 fa-brands fa-square-facebook"></i>
+                                    <i class="mr-2 fa-brands fa-square-twitter"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+        </section>
+        <section class="job jobb" id="Careers">
+            <div class="container-fluid">
+                <div class="row row6 pt-5">
+                    <div class="col-12">
+                        <h1 class="text-center font-weight-bold">LATEST <span style="color: #2416e1;"> JOB OPENING
+                            </span></h1>
+                        <hr class="border-dark borders">
+                    </div>
+                </div>
+                <div class="row row6 mr-5 pt-5">
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <p>At Xortican, we strongly believe that employees can develop faster and feel satisfied when
+                            they have a good personal life as well.We have an atmosphere where you can balance work with
+                            personal life.
+
+                            Join us and develop faster and more broadly than at any other point in your career. We
+                            conduct various work-life balancing programs that create productive work culture while
+                            minimizing the potential for tensions between work and other aspects of life. Whether you
+                            are looking for more support, more opportunity or more reward,Xortican Technologies is the
+                            name you can count on.
+                            We take on big challenges, provide support to conquer them, and give everyone the chance to
+                            shape the future of the company.For all job enquiries email .</p>
+                        <h2>hr@xoticantechnologies.com</h2>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <h4 class="">Latest News</h4>
+                        <h6>Current opening closed.</h6>
+                        <h6>Forward your resume to our official mail.</h6>
+                        <h2>hr@xoticantechnologies.com</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="contact ro" id="Contact">
+            <div class="container-fluid">
+                <div class="row row8 pt-5">
+                    <div class="col-12">
+                        <h1 class="font-weight-bold text-center">GET IN <span style="color: #2416e1;"> TOUCH
+                            </span></h1>
+                        <hr class="border-dark">
+                    </div>
+                </div>
+                <div class="row row8">
+                    <div class="col-2">
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h3>Contact Details</h3>
+                        <h7><i class="fa-solid fa-house"></i> Xortican Technologies</h7><br><br>
+                        <h7><i class="fa-solid fa-house"></i> #162, Raj Apartments,II nd floor,DPF Street, P.N.Palayam,
+                        </h7><br><br>
+                        <h7><i class="fa-solid fa-house"></i> Landmark: Behind Nellai lala Sweets, Coimbatore-37.</h7>
+                        <br><br>
+                        <h7><i class="fa-solid fa-phone"></i> Phone: +91 - 9659333880</h7><br><br>
+                        <h7><i class="fa-solid fa-phone"></i> Phone: +91- 0422-4218177</h7><br><br>
+                        <h7><i class="fa-solid fa-envelope"></i>Email: contact@xorticantechnologies.com</h7><br>
+                    </div>
+                    <div class="col--lg-4 col-md-6 col-sm-12">
+                        <form>
+                            <div class="form-group">
+
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Your Name">
+
+                            </div>
+                            <div class="form-group">
+
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Subject">
+
+                            </div>
+                            <div class="form-group">
+
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <input type="email" class="form-control text-center" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Submit">
+
+                            </div>
+                        </form>
+
+                        <div class="col-2">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row row8 pt-5 text-center">
+                <div class="col-sm-12 ">
+                    <i class="mr-4 fa-brands fa-5x fa-square-facebook"></i>
+                    <i class="mr-4 fa-brands fa-5x fa-square-twitter"></i>
+                    <i class=" mr-4 fa-brands fa-5x fa-square-google-plus"></i>
+                    <i class="mr-4 fa-solid fa-5x fa-square-envelope"></i>
+                </div>
+                <div class="row row8 w-100 pt-5">
+                    <div class="col-12 text-center">
+                        <p class="">Design And Developed by Xortican Technologies. Copyright © 2019. All
+                            Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

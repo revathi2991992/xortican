@@ -1,0 +1,131 @@
+*
+{
+    padding:0%;
+    margin:0%;
+    box-sizing:border-box;
+    font-size: 15px;
+}
+
+.row10 
+{
+background-color:rgba(121, 8, 96, 0.918);
+
+}
+.navbar
+{
+    background-color: black;
+
+
+}
+
+.masthead
+{
+    background-image: url("https://directlinedev.com/media/services/service/background/background_35_2UDIpF7.normal.jpeg");
+    background-position: center;
+    background-size: cover;
+    height:80vh;
+}
+.big h1
+{
+font-size:60px;
+}
+.masthead1
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:80vh;
+    background-image: url("https://img.freepik.com/free-vector/application-development-background_1300-165.jpg");
+}
+.masthead2
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://wolfmatrix.com/wp-content/uploads/2020/12/Types-of-software-bugs.jpg");
+    height:80vh;
+}
+.masthead3
+{
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url("https://image.shutterstock.com/image-vector/digital-marketing-concept-icons-symbols-260nw-2146803195.jpg");
+height:80vh;
+}
+.big h3{
+    font-size:30px;
+}
+.row9
+{
+    background-color:rgb(229, 229, 240);
+   height:18vh;
+}
+
+.rowww
+{
+background-color:rgb(202, 202, 226);
+}
+hr{
+    border-width:10%;
+    border-color: black ;
+}
+.roww
+{
+    background-color:rgb(229, 229, 240);  
+}
+span{
+    color:blue;
+    font-size: 35px;
+}
+
+.r4
+{
+    background-color: black;
+}
+.carousel3
+{
+    background-color: black;
+} 
+  .card-body
+{
+    background-color:rgb(232, 232, 242);  
+}  
+/* .people
+{
+    background-color:rgb(232, 232, 242);    
+} */
+.services
+{
+    background-color:rgb(232, 232, 242); 
+} 
+}
+
+.ima
+{
+    background-color:rgb(232, 232, 242);   
+height:20%;
+ width:10%;
+}
+
+.skills
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyqvBaUg_lLzPGTRUy4tPLDL4PFtUPVFblSw&usqp=CAU");
+}
+
+.jobb
+{
+    /* background-image: url("http://xorticantechnologies.com/img/blog/job2.png"); */
+ background-image: url('https://www.callcentrehelper.com/images/stories/2010/01/6-steps-760.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.ro
+{
+    height:100vh;
+background-color:rgb(202, 202, 226);
+}	
+
+.hr
+{
+    border-width: 20%;
+}
